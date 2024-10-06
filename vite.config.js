@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://e-commers-api-0hbn.onrender.com',  // Adjusted to point to the backend server
+        target: 'https://e-commers-api-0hbn.onrender.com/api',  // Adjusted to point to the backend server
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '/api'),  // Ensures that `/api` is preserved in the route
       }
